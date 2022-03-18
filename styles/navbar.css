@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  border: 2px solid red;
+  align-items: center;
+  height: 10vh;
+  background-color: white;
+
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  border: transparent;
+}
+.rnav > div > span {
+  font-weight: lighter;
+}
+.rnav {
+  display: flex;
+}
+.rnav > div {
+  margin-left: 40px;
+}
+.fbod {
+  display: flex;
+  border: 1px solid #d0d0d1;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+.fbod:hover {
+  color: #2cbebc;
+}
+.fbo {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  border: transparent;
+}
+.fbo > a {
+  text-decoration: none;
+  color: black;
+}
+.fbo:hover {
+  color: #2cbebc;
+}
+.fbo > a:hover {
+  color: #2cbebc;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+
+    <script
+      src="https://kit.fontawesome.com/e424a3d0f0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/checkout.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="heading">
+      <p>Checkout</p>
+    </div>
+
+    <div class="container">
+      <div id="paypay">
+        <h2>Payment</h2>
+        <h2>
+          Amount ₹<span id="payam"></span
+          </i>
+        </h2>
+      </div>
+      <form method="post">
+        <h4>Account Details</h4>
+
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="First Name" required class="name" />
+            <i class="fa fa-user icon"></i>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Last Name" required class="name" />
+            <i class="fa fa-user icon"></i>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+              class="name"
+            />
+            <i class="fa fa-envelope icon"></i>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-box">
+            <h4>Date of Birth</h4>
+            <input type="date" class="dob" />
+          </div>
+          <div class="input-box">
+            <h4>Gender</h4>
+            <input type="radio" id="b1" name="gender" checked class="radio" />
+            <label for="b1"> <i class="fas fa-male"></i> Male</label>
+            <input type="radio" id="b2" name="gender" class="radio" />
+            <label for="b2"> <i class="fas fa-female"></i> Female</label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-box">
+            <h4>Payment Details</h4>
+            <input
+              type="radio"
+              name="pay"
+              id="bc1"
+              checked
+              class="radio"
+              size="16"
+            />
+            <label for="bc1"
+              ><span> <i class="fa fa-cc-visa"></i> Credit Card</span></label
+            >
+
+            <input type="radio" name="pay" id="bc2" class="radio" />
+            <label for="bc2"
+              ><span><i class="fa fa-cc-paypal"></i> Paypal</span></label
+            >
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-box">
+            <input
+              type="number"
+              placeholder="Card Number"
+              required
+              class="name"
+              id="cc"
+            />
+            <i class="fa fa-credit-card icon"></i>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-box">
+            <input
+              type="number"
+              placeholder="Card CVV"
+              required
+              class="name"
+              id="cvv"
+            />
+            <i class="fas fa-credit-card icon"></i>
+          </div>
+          <div class="input-box">
+            <select name="" id="">
+              <option value="">MM</option>
+              <option value="">01</option>
+              <option value="">02</option>
+              <option value="">03</option>
+              <option value="">04</option>
+              <option value="">05</option>
+              <option value="">06</option>
+              <option value="">07</option>
+              <option value="">08</option>
+              <option value="">09</option>
+              <option value="">10</option>
+              <option value="">11</option>
+              <option value="">12</option>
+              <option value="">13</option>
+              <option value="">14</option>
+              <option value="">15</option>
+              <option value="">16</option>
+              <option value="">17</option>
+              <option value="">18</option>
+              <option value="">19</option>
+              <option value="">20</option>
+              <option value="">21</option>
+              <option value="">22</option>
+              <option value="">23</option>
+              <option value="">24</option>
+              <option value="">25</option>
+              <option value="">26</option>
+              <option value="">27</option>
+              <option value="">28</option>
+              <option value="">29</option>
+              <option value="">30</option>
+              <option value="">31</option>
+            </select>
+
+            <select name="" id="">
+              <option value="">YY</option>
+              <option value="">21</option>
+              <option value="">22</option>
+              <option value="">23</option>
+              <option value="">24</option>
+              <option value="">25</option>
+              <option value="">26</option>
+              <option value="">27</option>
+              <option value="">28</option>
+              <option value="">29</option>
+              <option value="">30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-box">
+            <button id="pay" type="submit">
+              PAY NOW <span id="payam"> </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container otpDiv">
+      <div class="input-group">
+        <div class="input-box">
+          <input
+            type="number"
+            placeholder="Enter Otp"
+            required
+            class="name"
+            id="otp"
+          />
+          <i class="fa fa-sms icon"></i>
+        </div>
+        <button id="otpButton" type="submit">Submit</button>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+  <script src="./js/checkout.js"></script>
+
+</html>
+<script>
+  var total = JSON.parse(localStorage.getItem("totalPrice"));
+  document.getElementById("payam").textContent = total;
+
+  document.getElementById("pay").addEventListener("click", redirect);
+
+  
+</script>

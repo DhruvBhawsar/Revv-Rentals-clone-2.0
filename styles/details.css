@@ -1,0 +1,295 @@
+#container115 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 32.5% 31% 32%;
+  grid-template-rows: 270px 450px 70px;
+  grid-column-gap: 2%;
+  grid-row-gap: 15px;
+  background-color: #f1f1f1;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  padding-left: 0.3%;
+  padding-right: 0.3%;
+  background-color: #f1f4f8;
+  color: rgba(0, 0, 0, 0.87);
+  margin-top: 10px;
+  /* background-color: ; */
+}
+body {
+  background-color: #f1f4f8;
+}
+#fix {
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#container115 > div {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#container115 > div:nth-child(1) {
+  grid-area: 1/1/2/3;
+}
+#container115 > div:nth-child(2) {
+  grid-area: 1/3/-1/-1;
+  padding-top: 15px;
+}
+#container115 > div:nth-child(3) {
+  grid-area: 2/1/3/3;
+}
+
+/*center the heading and lines*/
+
+#h2115 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* my code */
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 18px;
+  margin-top: 4%;
+}
+
+/*add and adjust the lines*/
+
+#h2115:before,
+#h2115:after {
+  content: "";
+  border-top: 2px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+  color: #8caead;
+}
+
+/*add spacing between heading and lines*/
+
+#h2115:after {
+  margin: 0 0 0 20px;
+}
+
+/* --------------table------------------------------ */
+
+table {
+  padding: 2px 4px;
+}
+td {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  padding: 9px;
+}
+
+#out {
+  padding: 0px 10px;
+  font-weight: 400;
+}
+#out:hover {
+  color: #00bab5;
+  cursor: default;
+}
+
+/* ----------input----------- */
+
+#temp {
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  display: flex;
+}
+#indiv {
+  padding-left: 20px;
+  /* margin-top: 35px; */
+  color: lightgray;
+}
+#indiv > p {
+  margin-bottom: 2px;
+}
+
+#input115 {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  font-size: 15px;
+  background-color: #f1f1f1;
+  width: 240px;
+  border-color: #e0e0e0;
+}
+#input115:focus {
+  outline: none;
+}
+
+#indiv2 {
+  padding-left: 20px;
+  margin-top: 35px;
+  color: lightgray;
+}
+#input2115 {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  font-size: 15px;
+  background-color: #f1f1f1;
+  width: 95%;
+
+  border-color: #e0e0e0;
+}
+#input2115:focus {
+  outline: none;
+}
+
+#aplybtn {
+  margin-top: 15px;
+  background-color: #0ebaba;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 10px 30px;
+  border: none;
+  margin-left: 20px;
+}
+/* --------------------------------- */
+#total115 {
+  font-size: 18px;
+  font-weight: 400;
+}
+#totaldiv115 {
+  margin-top: 35px;
+}
+#rd115 {
+  margin-top: 15px;
+}
+
+/* ---Toggle div */
+
+#togglediv {
+  margin-top: 20px;
+}
+#togglediv > p {
+  padding-left: 20px;
+}
+/*----- pay button----- */
+#paybtndiv {
+  margin-top: 35px;
+}
+
+#paybtn {
+  margin-left: 40%;
+  background-color: linear-gradient(to right, #1c80ab, #1caaa1);
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: none;
+  font-size: 16px;
+}
+
+#paybtn:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+/* --------------------------------------------------------------------------first box---------------------------------- */
+
+/* booking box */
+#box1 {
+  display: flex;
+  /* margin-top: 20px; */
+}
+
+#car {
+  width: 35%;
+}
+
+#booking {
+  width: 65%;
+}
+#insideB1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 6%;
+}
+#insideB1 > p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+}
+#insideB1 > p:nth-child(2) > span {
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #9b9b9b;
+  border-radius: 50%;
+  padding: 3px;
+}
+#insideB2 {
+  margin-top: 6%;
+}
+#insideB2 > div {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#insideB2 > div > p:nth-child(1) {
+  font-weight: bold;
+}
+#insideB2 > div > p:nth-child(2):hover {
+  color: #00bab5;
+  cursor: pointer;
+}
+
+#insideB3 > div {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#insideB3 > div > p:nth-child(1) {
+  font-weight: bold;
+}
+#insideB3 > div > p:nth-child(2):hover {
+  color: #00bab5;
+  cursor: pointer;
+}
+
+/* Car Box */
+
+#insideC1 {
+  height: 13%;
+  display: flex;
+
+  justify-content: space-around;
+}
+#insideC1 > p {
+  font-size: 18px;
+  font-weight: bold;
+}
+#insideC2 {
+  height: 62%;
+}
+#insideC3 {
+  height: 25%;
+}
+#insideC3 > div:nth-child(1) {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 5px;
+  color: gray;
+}
+#insideC3 > div:nth-child(2) {
+  display: flex;
+  justify-content: space-around;
+}
+#carimage {
+  margin-top: 5%;
+  height: 90%;
+  width: 80%;
+  margin-left: 10%;
+}

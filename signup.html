@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+
+    <style>
+      #main {
+        border: transparent;
+        /* height: 790px; */
+        width: 30%;
+        text-align: center;
+        margin: auto;
+        margin-top: 40px;
+        border-radius: 20px;
+        padding: 20px 15px;
+        font-size: 20px;
+        background-image: linear-gradient(to right, #1c80ab, #1caaa1);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        color: white;
+        margin-top: 20px;
+      }
+
+      h1 {
+        /* font-family: cursive; */
+        margin-top: 0px;
+        font-size: 35px;
+        text-align: center;
+        /* color: rgb(247, 76, 76); */
+      }
+
+      input {
+        height: 25px;
+        width: 80%;
+        padding: 5px;
+        /* border-radius: 20px; */
+      }
+
+      /* body {
+        background-image: url("https://www.safefood.net/getmedia/3d7a1265-2038-4345-a676-d0d8a6d304d5/healthy-diet.jpg?w=2000&h=1335&ext=.jpg&width=1360&resizemode=force");
+      } */
+
+      #submit {
+        margin-top: 5px;
+        font-size: 18px;
+        padding: 10px;
+        height: 50px;
+        width: 85%;
+        font-weight: bold;
+        color: white;
+        border-radius: 50px;
+        /* background-color: rgb(247, 76, 76); */
+      }
+
+      label {
+        /* margin-left: -300px; */
+        /* display: flex;
+        font-size: 20px;
+        margin-bottom: 0px;
+        padding: 0px; */
+        /* align-self: flex-start; font-family: cursive; */
+        /* color: rgb(212, 5, 67); */
+        /* justify-self: start; */
+      }
+
+      #submit:hover {
+        cursor: pointer;
+        border-radius: 50px;
+        color: white;
+        /* background-color: rgb(124, 19, 19); */
+      }
+      #btn {
+        background-color: white;
+        border: transparent;
+        border-radius: 20px;
+        width: 82%;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container22"></div>
+    <div id="main">
+      <h1>SIGNUP</h1>
+      <div>
+        <form>
+          <label for="">Name</label><br />
+          <input type="text" id="name" placeholder="Name" /><br /><br />
+
+          <label for="">Email</label><br />
+          <input type="email" id="email" placeholder="email" /><br /><br />
+
+          <label for="">Username</label><br />
+          <input type="text" id="username" placeholder="username" /><br /><br />
+
+          <label for="">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            placeholder="password"
+          /><br /><br />
+
+          <label for="">Mobile</label><br />
+          <input
+            type="number"
+            id="mobile"
+            placeholder="Enter Number"
+          /><br /><br />
+          <label for="">Description</label><br />
+          <input
+            type="text"
+            id="description"
+            placeholder="description"
+          /><br /><br />
+          <!-- <input type="submit" name="" id="submit" /><br /> -->
+          <button name="" id="btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  document.querySelector("#btn").addEventListener("click", Register);
+
+  async function Register(event) {
+    try {
+      event.preventDefault();
+      var Register_data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        username: document.getElementById("username").value,
+        mobile: document.getElementById("mobile").value,
+        description: document.getElementById("description").value,
+      };
+
+      Register_data = JSON.stringify(Register_data);
+      console.log(Register_data);
+      window.location.href = "login.html";
+    } catch (er) {
+      console.log(er);
+    }
+
+    let reg_api = `https://masai-api-mocker.herokuapp.com/auth/register`;
+
+    let response = await fetch(reg_api, {
+      method: "POST",
+      body: Register_data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let data = await response.json();
+    console.log(data);
+    if (data.error == false) {
+      alert(data.message);
+      window.location.href = "login.html";
+    }
+  }
+
+  import navbar from "./component/navbar.js";
+  let container22 = document.querySelector(".container22"); // for navbar reference:
+  container22.innerHTML = navbar();
+</script>

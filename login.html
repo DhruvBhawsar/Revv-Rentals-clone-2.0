@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar.css" />
+
+    <style>
+      /* body {
+        background-image: url(https://www.cypressgreen.in/blog/wp-content/uploads/2021/03/food.jpg);
+        background-size: cover;
+      }
+
+      #login_div {
+        border: 1px solid black;
+        width: 27%;
+        height: 540px;
+        border-radius: 30px;
+        margin: auto;
+        margin-top: 7%;
+        text-align: center;
+        font-size: 22px;
+        padding: 3% 6%;
+        font-weight: bold;
+        background-color: rgb(247, 203, 122);
+      }
+
+      input {
+        height: 25px;
+        width: 80%;
+      }
+
+      label {
+        font-size: 38px;
+        font-family: cursive;
+        color: rgb(160, 82, 4);
+      }
+
+      input {
+        font-size: 20px;
+        padding: 13px;
+        height: 15px;
+        width: 80%;
+        margin-top: 4%;
+      }
+      h1 {
+        font-family: cursive;
+        margin-top: 10px;
+        font-size: 60px;
+        text-align: center;
+        color: rgb(3, 3, 3);
+      }
+
+      #btn {
+        margin-top: 4%;
+        font-size: 25px;
+        padding: 14px;
+        height: 56px;
+        width: 85%;
+        font-weight: bold;
+        background-color: rgb(167, 81, 5);
+        color: rgb(255, 231, 215);
+      } */
+      /* h1 {
+        background-color: #49a6ba;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 0px;
+      }
+      body {
+        margin: 0px;
+      } */
+      #login_div {
+        /* background-color: #49a6ba; */
+        display: flex;
+        margin-top: 50px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* background-color: white; */
+        background-image: linear-gradient(to right, #1c80ab, #1caaa1);
+        border-radius: 20px;
+      }
+      #fo {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+      }
+      input {
+        width: 90%;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      #btn {
+        width: 100%;
+        margin-bottom: 30px;
+        /* background-image: linear-gradient(to right, #1c80ab, #1caaa1); */
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border: transparent;
+        border-radius: 20px;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      label {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      body {
+        /* background-image: linear-gradient(to right, #1c80ab, #1caaa1); */
+        /* background-color: #b3d4ff; */
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container22"></div>
+    <div id="fo">
+      <div id="login_div">
+        <form action="">
+          <h1>LOGIN</h1>
+
+          <label for="">Username</label>
+          <input type="text" id="username" placeholder="Username" /><br /><br />
+
+          <label for="">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+          /><br /><br />
+          <!-- <input type="submit" id="btn" placeholder="Login" /><br />/ -->
+          <button id="btn">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="module">
+  document.querySelector("#btn").addEventListener("click", login);
+
+  async function login(e) {
+    e.preventDefault();
+    let login_Data = {
+      username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
+    };
+
+    login_Data = JSON.stringify(login_Data);
+
+    let login_url = "https://masai-api-mocker.herokuapp.com/auth/login";
+
+    let response = await fetch(login_url, {
+      method: "POST",
+      body: login_Data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    let data = await response.json();
+    if (data.error == false) {
+      alert("Login Successful !");
+      console.log(data);
+      let username = document.getElementById("username").value;
+      // getUserDetails(username, data.token);
+      window.location.href = "index.html";
+    } else {
+      alert(data.message);
+    }
+  }
+
+  async function getUserDetails(username, token) {
+    let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
+
+    let res = await fetch(api, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    let data = await res.json();
+    console.log(data);
+    document.querySelector("owner").textContent = data.name;
+  }
+
+  import navbar from "./component/navbar.js";
+  let container22 = document.querySelector(".container22"); // for navbar reference:
+  container22.innerHTML = navbar();
+</script>

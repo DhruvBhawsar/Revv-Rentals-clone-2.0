@@ -1,0 +1,82 @@
+#anim {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 200px;
+
+  height: 400px;
+}
+#anim > div {
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#anim > div > div > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 1s;
+}
+#anim > div > div {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 70px;
+  transition: 1s;
+}
+#anim > div > div:hover {
+  width: 150px;
+  height: 150px;
+}
+#anim > div > div > div:hover {
+  width: 130px;
+  height: 130px;
+  background-color: #2ed1ce;
+}
+.ind {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ind > i {
+  font-size: 40px;
+  transition: 1s;
+}
+.ind > i:hover {
+  font-size: 60px;
+  animation: mymove 5s;
+  color: white;
+}
+@keyframes mymove {
+  50% {
+    transform: rotate(720deg);
+  }
+}
+.ind > i > img {
+  width: 40px;
+}
+.ind > i > img:hover {
+  width: 60px;
+}
+#ex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#line {
+  width: 60%;
+  border-bottom: 2px dotted black;
+  margin: auto;
+  z-index: -1;
+  margin-top: -200px;
+}

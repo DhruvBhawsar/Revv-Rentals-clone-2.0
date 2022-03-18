@@ -1,0 +1,205 @@
+.container1 {
+  height: auto;
+  width: 100%;
+  background-color: #f1f4f8;
+}
+
+.blackwala {
+  margin: auto;
+  margin-top: 5%;
+  height: 450px;
+  width: 75%;
+  padding: 15px;
+  border-radius: 9px;
+  background-color: rgb(37, 37, 37);
+}
+
+.threebox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.blackwala > h1 {
+  margin-left: 8%;
+  margin-bottom: 4%;
+  font-size: 35px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.threebox > div {
+  list-style-type: none;
+  color: rgb(165, 163, 163);
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.threebox > div :hover {
+  color: white;
+  cursor: pointer;
+}
+
+#box01 > div {
+  margin-bottom: 20px;
+}
+
+.whitewala {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 5%;
+  height: 450px;
+  width: 75%;
+  padding: 14px;
+  border-radius: 9px;
+  background-color: rgb(253, 251, 251);
+}
+
+.whitewala > div {
+  height: 80%;
+  width: 33%;
+  margin-top: 2%;
+  padding: 25px;
+}
+
+.revimgbox {
+  margin-top: 5%;
+  height: 25%;
+  width: 35%;
+  margin-bottom: 3%;
+}
+
+#greyp {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(107, 107, 107);
+  font-size: 15px;
+  padding: 4px;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.greylist > li {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(105, 105, 105);
+  font-weight: 500;
+  list-style: none;
+  font-size: 17px;
+  margin-top: 6%;
+  text-align: center;
+}
+
+.social > h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(110, 110, 110);
+  margin-left: 4%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.revapp > h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(110, 110, 110);
+  font-weight: 500;
+  font-size: 21px;
+}
+
+#socialicon {
+  display: flex;
+  justify-content: space-between;
+  height: 38px;
+  width: 84%;
+  margin-top: 6%;
+}
+
+#socialicon > div {
+  /* height: 100%;
+    width: 15%; */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  font-size: 28px;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black;
+    padding-top: 5px;
+    text-align: center; */
+  color: rgb(80, 79, 79);
+  border-radius: 50%;
+}
+
+#socialicon > div:hover {
+  background-color: rgb(6, 178, 190);
+  color: white;
+  border-radius: 50%;
+}
+
+.revapp {
+  padding: 25px;
+}
+
+.revapp > div {
+  display: flex;
+  height: 65px;
+  width: 110%;
+  margin-top: 4%;
+  /* padding: 20px; */
+  border: 2px solid rgb(204, 201, 201);
+}
+
+#apple {
+  height: 100%;
+  width: 15%;
+  font-size: 35px;
+  padding: 3px;
+  text-align: center;
+  color: rgb(80, 79, 79);
+}
+
+.bdabox {
+  padding: 6px;
+}
+
+.apphead {
+  color: rgb(75, 74, 74);
+  font-size: 18px;
+  margin-left: 2%;
+  margin-top: 4%;
+  height: 25px;
+  width: 80%;
+}
+
+.apphead > b {
+  color: rgb(8, 8, 8);
+  font-size: 20px;
+  margin-left: 2%;
+}
+
+#greyH {
+  /* margin-bottom: 4%; */
+  font-size: 35px;
+  color: rgb(135, 136, 138);
+  font-family: Roboto, sans-serif;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.dabba {
+  margin: auto;
+  margin-top: 5%;
+  height: auto;
+  width: 78%;
+  padding: 14px;
+  border-radius: 9px;
+}
+
+#greydabba {
+  color: rgb(61, 59, 59);
+  font-size: 15px;
+  line-height: 27px;
+  font-family: Roboto, sans-serif;
+}
