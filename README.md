@@ -6,6 +6,7 @@ We the group of 6 members cloned a rental car website called "revv rental cars "
   <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
+  <li>mongodb</li>
 </ul>
 
 
